@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty & Skincare Products</title>
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+
+<header>
+    <h1>Top Best Products to Sell in Beauty & Skincare Category</h1>
+</header>
+
+<div class="product-list">
+    <!-- Beauty & Skincare Products -->
+    <div class="product-item" onclick="showDetails('product1')">
+        <img src="https://nucasa.co.in/cdn/shop/products/WhatsAppImage2021-05-10at14.51.32_1200x.jpg?v=1620638827" alt="Product 1">
+        <h3>Facial Roller</h3>
+        <p>Relax and rejuvenate skin.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product2')">
+        <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/galvanic-facial-machine/k/n/q/15-wireless-7-led-light-therapy-facial-skin-care-mask-for-acne-original-imagudeugymd4gqd.jpeg?q=90&crop=false" alt="Product 2">
+        <h3>LED Facial Mask</h3>
+        <p>For skin therapy and anti-aging.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product3')">
+        <img src="https://aloxe.in/cdn/shop/files/11392423675_221020074.jpg?v=1686403403&width=1700" alt="Product 3">
+        <h3>Makeup Organizer</h3>
+        <p>Stylish and convenient storage.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product4')">
+        <img src="https://www.beardhood.in/cdn/shop/products/Amazon_PeelOffMask_Lisitng_5.jpg?v=1672031500" alt="Product 4">
+        <h3>Charcoal Face Mask</h3>
+        <p>For deep cleansing and detox.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product5')">
+        <img src="https://m.media-amazon.com/images/I/510wNrOm+4L.jpg" alt="Product 5">
+        <h3>Serum Applicator</h3>
+        <p>Effortless serum application.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product6')">
+        <img src="https://vasustore.com/cdn/shop/products/model.1656_1.webp?v=1661507530" alt="Product 6">
+        <h3>Face Cleansing Brush</h3>
+        <p>Deep cleans pores for glowing skin.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product7')">
+        <img src="https://www.thenaturalwash.com/cdn/shop/products/benefits_14c30a2a-43bb-4e94-ad45-a7460635df0b.jpg?v=1685340299&width=1445" alt="Product 7">
+        <h3>Sheet Masks</h3>
+        <p>Hydrates and refreshes skin.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product8')">
+        <img src="https://www.thriveco.in/cdn/shop/files/Hair-growth-serum-with-regendil.jpg?v=1733036511&width=500" alt="Product 8">
+        <h3>Hair Growth Serum</h3>
+        <p>Promotes stronger and thicker hair.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product9')">
+        <img src="https://himalayawellness.in/cdn/shop/products/anti-wrinkle-cream_1024x1024.jpg?v=1622100480" alt="Product 9">
+        <h3>Anti-Wrinkle Cream</h3>
+        <p>Reduces fine lines and wrinkles.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product10')">
+        <img src="https://www.essentialoil.com/cdn/shop/files/EOC-LabelReadyKits-Eucalyptus-Square_1080x1080.jpg?v=1689784759" alt="Product 10">
+        <h3>Essential Oils</h3>
+        <p>Perfect for skincare and relaxation.</p>
+    </div>
+</div>
+
+<!-- Product details modal -->
+<div class="product-details" id="product-details">
+    <div class="details-content" id="details-content">
+        <h2 id="product-title"></h2>
+        <p id="product-description"></p>
+        <button class="close-btn" onclick="closeDetails()">Close</button>
+    </div>
+</div>
+
+<script>
+    const products = {
+        product1: {
+            title: "Facial Roller",
+            description: "Soothe and tone skin with this compact facial roller. Available for $2.50 on Alibaba. Sell for $12.99 on Amazon."
+        },
+        product2: {
+            title: "LED Facial Mask",
+            description: "Advanced LED light therapy for skin rejuvenation. Available for $15.00 on Alibaba. Sell for $49.99 on Amazon."
+        },
+        product3: {
+            title: "Makeup Organizer",
+            description: "Organize cosmetics efficiently. Available for $5.00 on Alibaba. Sell for $19.99 on Amazon."
+        },
+        product4: {
+            title: "Charcoal Face Mask",
+            description: "Deep cleanse pores with activated charcoal. Available for $1.20 on Alibaba. Sell for $8.49 on Amazon."
+        },
+        product5: {
+            title: "Serum Applicator",
+            description: "Ensure even application of serums. Available for $3.00 on Alibaba. Sell for $14.99 on Amazon."
+        },
+        product6: {
+            title: "Face Cleansing Brush",
+            description: "Deep cleans pores effectively. Available for $3.50 on Alibaba. Sell for $16.50 on Amazon."
+        },
+        product7: {
+            title: "Sheet Masks",
+            description: "Nourishing sheet masks for hydration. Available for $0.50 per mask on Alibaba. Sell for $1.99 per mask on Amazon."
+        },
+        product8: {
+            title: "Hair Growth Serum",
+            description: "Encourages stronger hair growth. Available for $4.00 on Alibaba. Sell for $18.99 on Amazon."
+        },
+        product9: {
+            title: "Anti-Wrinkle Cream",
+            description: "Smooths fine lines and wrinkles. Available for $6.00 on Alibaba. Sell for $22.00 on Amazon."
+        },
+        product10: {
+            title: "Essential Oils",
+            description: "Pure oils for skincare and aromatherapy. Available for $3.00 on Alibaba. Sell for $15.99 on Amazon."
+        }
+    };
+
+    function showDetails(productId) {
+        const product = products[productId];
+        document.getElementById('product-title').textContent = product.title;
+        document.getElementById('product-description').textContent = product.description;
+        document.getElementById('product-details').style.display = 'flex';
+    }
+
+    function closeDetails() {
+        document.getElementById('product-details').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>

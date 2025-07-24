@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Pet Products</title>
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+
+<header>
+    <h1>Top Best Products to Sell in the Pet Products Category</h1>
+</header>
+
+<div class="product-list">
+    <!-- Pet Products -->
+    <div class="product-item" onclick="showDetails('product1')">
+        <img src="https://www.sgsmartpaw.com/cdn/shop/files/SQUARE-Smartpaw-Ultimate-Feeder-Gen-3.png?v=1720605204&width=2048" alt="Automatic Pet Feeder">
+        <h3>Automatic Pet Feeder</h3>
+        <p>Scheduled feeding for pets.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product2')">
+        <img src="https://m.media-amazon.com/images/I/71urz18S0pL.jpg" alt="Interactive Pet Toy">
+        <h3>Interactive Pet Toy</h3>
+        <p>Fun and engagement for pets.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product3')">
+        <img src="https://images.meesho.com/images/products/101844541/2o8ey_512.webp" alt="Pet Grooming Glove">
+        <h3>Pet Grooming Glove</h3>
+        <p>Effective hair removal.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product4')">
+        <img src="https://thefluffycompany.in/cdn/shop/files/01_web_9s8duoif.png?v=1714552768" alt="Orthopedic Pet Bed">
+        <h3>Orthopedic Pet Bed</h3>
+        <p>Comfort for senior pets.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product5')">
+        <img src="https://m.media-amazon.com/images/I/71i8E0hBi8L.jpg" alt="Collapsible Pet Travel Bowl">
+        <h3>Collapsible Pet Travel Bowl</h3>
+        <p>Convenient for travel.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product6')">
+        <img src="https://m.media-amazon.com/images/I/61d+PdEPidL.jpg"  alt="Dog Seat Belt">
+        <h3>Dog Seat Belt</h3>
+        <p>Safety during car rides.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product7')">
+        <img src="https://images-cdn.ubuy.co.in/66389f653978936db21461a7-automatic-pet-water-fountain-95oz-2-8l.jpg" alt="Pet Water Fountain">
+        <h3>Pet Water Fountain</h3>
+        <p>Filtered water for pets.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product8')">
+        <img src="https://m.media-amazon.com/images/I/71VQaS9yHWL.jpg" alt="Cat Scratching Post">
+        <h3>Cat Scratching Post</h3>
+        <p>Durable and space-saving.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product9')">
+        <img src="https://hankpets.com/wp-content/uploads/2021/01/HANK-Pet-Hair-Remover-roller-1-compressed-560x560.jpg" alt="Pet Hair Remover Roller">
+        <h3>Pet Hair Remover Roller</h3>
+        <p>Efficiently removes pet hair.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product10')">
+        <img src="https://images.meesho.com/images/products/230204756/45b1a_512.webp" alt="Pet Training Pads">
+        <h3>Pet Training Pads</h3>
+        <p>Helps with house training.</p>
+    </div>
+</div>
+
+<!-- Product details modal -->
+<div class="product-details" id="product-details">
+    <div class="details-content" id="details-content">
+        <h2 id="product-title"></h2>
+        <p id="product-description"></p>
+        <button class="close-btn" onclick="closeDetails()">Close</button>
+    </div>
+</div>
+
+<script>
+    const products = {
+        product1: {
+            title: "Automatic Pet Feeder",
+            description: "Feeds pets on a schedule. Available for $20.00 on Alibaba. Sell for $65.00 on Amazon."
+        },
+        product2: {
+            title: "Interactive Pet Toy",
+            description: "Keeps pets engaged and active. Available for $5.00 on Alibaba. Sell for $19.99 on Amazon."
+        },
+        product3: {
+            title: "Pet Grooming Glove",
+            description: "Perfect for deshedding. Available for $2.50 on Alibaba. Sell for $10.99 on Amazon."
+        },
+        product4: {
+            title: "Orthopedic Pet Bed",
+            description: "Provides joint support for pets. Available for $18.00 on Alibaba. Sell for $60.00 on Amazon."
+        },
+        product5: {
+            title: "Collapsible Pet Travel Bowl",
+            description: "Portable and lightweight. Available for $1.50 on Alibaba. Sell for $7.99 on Amazon."
+        },
+        product6: {
+            title: "Dog Seat Belt",
+            description: "Ensures safety while traveling. Available for $3.00 on Alibaba. Sell for $12.99 on Amazon."
+        },
+        product7: {
+            title: "Pet Water Fountain",
+            description: "Encourages pets to drink water. Available for $10.00 on Alibaba. Sell for $35.99 on Amazon."
+        },
+        product8: {
+            title: "Cat Scratching Post",
+            description: "Durable and compact design. Available for $8.00 on Alibaba. Sell for $29.99 on Amazon."
+        },
+        product9: {
+            title: "Pet Hair Remover Roller",
+            description: "Reusable and effective. Available for $3.50 on Alibaba. Sell for $15.00 on Amazon."
+        },
+        product10: {
+            title: "Pet Training Pads",
+            description: "Absorbent and leak-proof. Available for $5.00 on Alibaba. Sell for $18.99 on Amazon."
+        }
+    };
+
+    function showDetails(productId) {
+        const product = products[productId];
+        document.getElementById('product-title').textContent = product.title;
+        document.getElementById('product-description').textContent = product.description;
+        document.getElementById('product-details').style.display = 'flex';
+    }
+
+    function closeDetails() {
+        document.getElementById('product-details').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>

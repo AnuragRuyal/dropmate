@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - DropMate</title>
+    <link rel="stylesheet" href="login.css">
+    <script>
+        function handleLogin(event) {
+            event.preventDefault(); 
+            window.location.href = 'index.html';  
+        }
+    </script>
+</head>
+<body background="https://c.wallhere.com/photos/8b/63/anime_landscape_torii_sun_rays_forest_Asian_architecture_steps_trees-159308.jpg!d">
+
+    <section>
+        <form id="loginForm" onsubmit="handleLogin(event)">
+            <h1>Login</h1>
+            <div class="inputbox">
+                <ion-icon name="mail-outline"></ion-icon>
+                <input type="email" id="email" placeholder=" " required>
+                <label>Email</label>
+            </div>            
+            <div class="inputbox">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input type="password" id="password" placeholder=" " required>
+                <label>Password</label>
+            </div>
+            <div class="forget">
+                <label>
+                    <input type="checkbox"> Remember Me
+                </label>
+                <a href="#">Forgot Password?</a>
+            </div>
+            <button type="submit">Log in</button>
+            <div class="register">
+                <p>Don't have an account? <a href="register.html">Register</a></p>
+            </div>
+        </form>
+    </section>
+
+</body>
+</html>

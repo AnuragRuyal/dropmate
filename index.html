@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropMate</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="1.html">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .testimonials {
+            background-color: #f9f9f9;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px auto;
+            max-width: 300px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .newsletter {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .newsletter input {
+            padding: 10px;
+            width: 250px;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .newsletter button {
+            padding: 10px 20px;
+            background: #0056b3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            cursor: pointer;
+            display: none;
+        }
+
+        .stats {
+            background-color: #eef2f3;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .stats .stat {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">DropMate</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="productlist.html">Products</a></li>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="login.html" class="btn" id="get-started">Get Started</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Revolutionizing Dropshipping</h1>
+            <p>Find trending, profitable products and grow your online business effortlessly with AI-driven insights.</p>
+            <a href="#features" class="cta-btn">Explore Features</a>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <h2>Our Features</h2>
+        <div class="feature-cards">
+            <div class="card">
+                <h3>AI-Powered Insights</h3>
+                <p>Discover top-trending products with high profit margins.</p>
+            </div>
+            <div class="card">
+                <h3>Supplier Integration</h3>
+                <p>Seamlessly connect with top suppliers worldwide.</p>
+            </div>
+            <div class="card">
+                <h3>Profit Calculations</h3>
+                <p>Get real-time profit analysis and sales trends.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>What Our Users Say</h2>
+        <div class="testimonial-card">
+            <p>"DropMate helped me scale my e-commerce business with ease!"</p>
+            <h4>- Alex</h4>
+        </div>
+        <div class="testimonial-card">
+            <p>"The AI insights are a game changer for finding trending products."</p>
+            <h4>- Priya</h4>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <h2>Our Achievements</h2>
+        <div class="stat">4000+ Products Suggested</div>
+        <div class="stat">450+ Happy Clients</div>
+        <div class="stat">96.23% Customer Satisfaction</div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <p>Phone: 9610811851</p>
+        <p>Email: 2024csanurag20096@poornima.edu.in</p>
+    </section>
+
+    <section id="about-us" class="about-us-section">
+        <h2>About Us</h2>
+        <p>
+            At <strong>DropMate</strong>, we are passionate about simplifying the dropshipping journey. Our platform uses advanced AI to help entrepreneurs discover trending products, connect with reliable suppliers, and grow their online businesses effortlessly.
+        </p>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <h2>Stay Updated</h2>
+        <input type="email" placeholder="Enter your email" />
+        <button>Subscribe</button>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 DropMate. All rights reserved.</p>
+    </footer>
+
+    <button class="back-to-top" onclick="scrollToTop()">↑</button>
+
+    <script>
+        // Smooth scroll ke liye
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
+                });
+            });
+        });
+
+        // niche se uper Button
+        const backToTop = document.querySelector('.back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.style.display = 'flex';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth',
+            });
+        }
+    </script>
+</body>
+</html>

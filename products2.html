@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness & Wellness Tools</title>
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+
+<header>
+    <h1>Top Best Products to sell in Fitness & Wellness category. Available on AliExpress & Alibaba</h1>
+</header>
+
+<div class="product-list">
+    <!-- Fitness &Wellness  Products -->
+    <div class="product-item" onclick="showDetails('product1')">
+        <img src="https://tse2.mm.bing.net/th?id=OIP.lxZ6YunEpvNE9i9T89gMNAAAAA&pid=Api&P=0&h=180" alt="Product 1">
+        <h3>Resistance Bands:</h3>
+        <p>Exercise Bands for Men & Women.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product2')">
+        <img src="https://media.istockphoto.com/id/1366052585/photo/shot-of-a-group-of-friends-hanging-out-before-working-out-together.jpg?s=612x612&w=0&k=20&c=rj7LgjUuXde0eLWikS1rvDnsKDdBotgsy9eM5HDzko0=" alt="Product 2">
+        <h3>Fitness Apparel</h3>
+        <p>comfortable sportswear for gym, running & more.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product3')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVDWPeSxLdbojYttq1C0go8S9byVPPlzfA_g&s" alt="Product 3">
+        <h3>Smartwatches</h3>
+        <p>Smart watch with calling and notification Fitness Smartwatch Smartwatch. .</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product4')">
+        <img src="https://cdn.thewirecutter.com/wp-content/media/2024/07/yoga-mat-2048px-1633-2x1-1.jpg?width=2048&quality=75&crop=2:1&auto=webp" alt="Product 4">
+        <h3>Yoga Mats</h3>
+        <p>portable mats are designed to provide a non-slip and cushioned surface during practice.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product5')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhE4zOKxHx6BwINKIcr6GZHLKSMkkLj5TPhQ&s" alt="Product 5">
+        <h3>Foam Rollers</h3>
+        <p>Always ready to use.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product6')">
+        <img src="https://m.media-amazon.com/images/I/61m6YynzfdL.jpg" alt="Product 6">
+        <h3>Jump Ropes</h3>
+        <p>Speed jump ropes are for improving their footwork and conditioning skills.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product7')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2wtG_8-86-u0mDYa7LjYfUCO9xaTF0tl3JA&s" alt="Product 7">
+        <h3>Protein Powders and Supplements</h3>
+        <p>Help in growing muscles during workouts.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product8')">
+        <img src="https://m.media-amazon.com/images/I/61VV0AGQotL._AC_UF1000,1000_QL80_.jpg" alt="Product 8">
+        <h3>Hydration Bottles</h3>
+        <p>Stay hydrated every time.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product9')">
+        <img src="https://i.pcmag.com/imagery/roundups/0634CGyLGOHgKlIbVidl2zZ-43..v1697126352.jpg" alt="Product 9">
+        <h3>Fitness Trackers</h3>
+        <p>Monitor in real time.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product10')">
+        <img src="https://www.powermaxfitness.net/uploads/1709901932_banner_080320241815321.jpg" alt="Product 10">
+        <h3>Exercise Bikes and Treadmills</h3>
+        <p>Just for Exercise.</p>
+    </div>
+</div>
+
+<!-- Product details modal -->
+<div class="product-details" id="product-details">
+    <div class="details-content" id="details-content">
+        <h2 id="product-title"></h2>
+        <p id="product-description"></p>
+        <button class="close-btn" onclick="closeDetails()">Close</button>
+    </div>
+</div>
+
+<script>
+    const products = {
+        product1: {
+            title: "Resistance Bands",
+            description: " Compact, easy to ship, and versatile for various workouts. Available for $0.80-1.80. You can sell it for $8.48. "
+        },
+        product2: {
+            title: "Fitness Apparel",
+            description: "Wide variety of styles, sizes, and brands available, allowing customers to browse and compare easily. Available for $3.80-5.00. You can sell it for $11.50."
+        },
+        product3: {
+            title: "Smartwatches",
+            description: "Detailed product descriptions, reviews, and comparisons can be easily showcased online.  Available for $12-50. You can sell it for $50-456 on Amazon."
+        },
+        product4: {
+            title: "Yoga mats",
+            description: "Diverse range of sizes, materials, and designs, making it convenient for customers to find their perfect match.  Available for $3.16-7.00. You can sell it for $15-28 on Amazon."
+        },
+        product5: {
+            title: "Foam Rollers",
+            description: "Easy to ship, and detailed product information can help customers choose the right size and density. Available for $2.00-3.89. You can sell it for $10-15."
+        },
+        product6: {
+            title: "Jump Ropes",
+            description: "Compact, lightweight, and available in various styles and lengths, making them easy to ship. Available for $1.33-1.50. You can sell it for $6.00-10.00."
+        },
+        product7: {
+            title: "Protein Powders and Supplements",
+            description: "Wide range of options, convenient packaging, and detailed product information can be easily provided online. Available for $2.80. You can sell it for $10.78."
+        },
+        product8: {
+            title: "Hydration Bottles",
+            description: "Stylish designs, various sizes, and unique features can be showcased effectively online. Available for $2.00-3.45. You can sell it for $8.00-9.00"
+        },
+        product9: {
+            title: "Fitness Trackers",
+            description: "Detailed product comparisons, reviews, and specifications can be easily presented online. Available for $3.00-5.00. You can sell it for $16.50."
+        },
+        product10: {
+            title: "Exercise Bikes and Treadmills",
+            description: "Detailed product information, virtual demonstrations, and customer reviews can help customers make informed decisions. Available for $20.00-25.78. You can sell it for $50.00-70.89."
+        },
+    };
+
+    function showDetails(productId) {
+        const product = products[productId];
+        document.getElementById('product-title').textContent = product.title;
+        document.getElementById('product-description').textContent = product.description;
+        document.getElementById('product-details').style.display = 'flex';
+    }
+
+    function closeDetails() {
+        document.getElementById('product-details').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>

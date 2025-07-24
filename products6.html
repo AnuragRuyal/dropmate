@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainable Products</title>
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+
+<header>
+    <h1>Top Sustainable Products: Eco-Friendly and Innovative Choices</h1>
+</header>
+
+<div class="product-list">
+    <!-- Sustainable Products -->
+    <div class="product-item" onclick="showDetails('product1')">
+        <img src="https://m.media-amazon.com/images/I/61YuhJHMlXL.jpg" alt="Product 1">
+        <h3>Reusable Water Bottles</h3>
+        <p>Durable and designed for daily use.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product2')">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2023/2/QR/KI/GP/44793768/bamboo-toothbrush-500x500.png" alt="Product 2">
+        <h3>Bamboo Toothbrushes</h3>
+        <p>Eco-friendly alternative to plastic.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product3')">
+        <img src="https://images-cdn.ubuy.co.id/65f50db425d10a498c047ad5-solpowben-30000mah-solar-charger-for.jpg" alt="Product 3">
+        <h3>Solar-Powered Chargers</h3>
+        <p>Charge devices sustainably using solar energy.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product4')">
+        <img src="https://m.media-amazon.com/images/I/81-cLbynG7L.jpg" alt="Product 4">
+        <h3>Reusable Beeswax Wraps</h3>
+        <p>A sustainable alternative to plastic wraps.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product5')">
+        <img src="https://m.media-amazon.com/images/I/61AGSu9b8jL.jpg" alt="Product 5">
+        <h3>Compostable Phone Cases</h3>
+        <p>Made from plant-based materials.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product6')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsZxz8kfQUI_PRJt5v4liOaTPBBrs8_sOXdA&s" alt="Product 6">
+        <h3>Eco-Friendly Notebooks</h3>
+        <p>Made from recycled paper.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product7')">
+        <img src="https://www.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3/yP-mplace/Bags/Hand_Bags/YPB09HKG3NQZ_1.jpg&resizeTo=600" alt="Product 7">
+        <h3>Reusable Shopping Bags</h3>
+        <p>Stylish and durable alternatives to plastic bags.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product8')">
+        <img src="https://5.imimg.com/data5/UI/MU/MJ/SELLER-2896936/biodegradable-pot-500x500.jpg" alt="Product 8">
+        <h3>Biodegradable Plant Pots</h3>
+        <p>Perfect for gardeners and eco-conscious homes.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product9')">
+        <img src="https://m.media-amazon.com/images/I/51k6MAt1tZL.jpg" alt="Product 9">
+        <h3>Reusable Coffee Cups</h3>
+        <p>Help reduce single-use cup waste.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product10')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyoNoi3dajdA2ohWXIKy-GKsKaLaAw32iN4w&s" alt="Product 10">
+        <h3>Eco-Friendly Cleaning Products</h3>
+        <p>Non-toxic and biodegradable solutions.</p>
+    </div>
+</div>
+
+<!-- Product details modal -->
+<div class="product-details" id="product-details">
+    <div class="details-content" id="details-content">
+        <h2 id="product-title"></h2>
+        <p id="product-description"></p>
+        <button class="close-btn" onclick="closeDetails()">Close</button>
+    </div>
+</div>
+
+<script>
+    const products = {
+        product1: {
+            title: "Reusable Water Bottles",
+            description: "Eco-friendly, BPA-free, and highly durable. Cost: $3-$5. Sell: $12-$20."
+        },
+        product2: {
+            title: "Bamboo Toothbrushes",
+            description: "Sustainable materials, biodegradable. Cost: $1-$2. Sell: $5-$10."
+        },
+        product3: {
+            title: "Solar-Powered Chargers",
+            description: "Perfect for outdoor adventures and emergencies. Cost: $10-$15. Sell: $30-$50."
+        },
+        product4: {
+            title: "Reusable Beeswax Wraps",
+            description: "Natural alternative for food storage. Cost: $3-$5. Sell: $10-$15."
+        },
+        product5: {
+            title: "Compostable Phone Cases",
+            description: "Durable and eco-friendly. Cost: $5-$10. Sell: $20-$30."
+        },
+        product6: {
+            title: "Eco-Friendly Notebooks",
+            description: "Ideal for students and professionals. Cost: $2-$4. Sell: $8-$12."
+        },
+        product7: {
+            title: "Reusable Shopping Bags",
+            description: "Stylish and easy to clean. Cost: $1-$2. Sell: $5-$10."
+        },
+        product8: {
+            title: "Biodegradable Plant Pots",
+            description: "Great for nurturing plants sustainably. Cost: $2-$4. Sell: $10-$15."
+        },
+        product9: {
+            title: "Reusable Coffee Cups",
+            description: "Reduce waste with stylish designs. Cost: $3-$5. Sell: $12-$20."
+        },
+        product10: {
+            title: "Eco-Friendly Cleaning Products",
+            description: "Safer for the environment and effective. Cost: $5-$8. Sell: $15-$25."
+        },
+    };
+
+    function showDetails(productId) {
+        const product = products[productId];
+        document.getElementById('product-title').textContent = product.title;
+        document.getElementById('product-description').textContent = product.description;
+        document.getElementById('product-details').style.display = 'flex';
+    }
+
+    function closeDetails() {
+        document.getElementById('product-details').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>

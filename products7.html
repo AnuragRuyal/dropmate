@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids & Baby Products</title>
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+
+<header>
+    <h1>Top Best Selling Kids & Baby Products: Convenience and Comfort</h1>
+</header>
+
+<div class="product-list">
+    <!-- Kids & Baby Products -->
+    <div class="product-item" onclick="showDetails('product1')">
+        <img src="https://m.media-amazon.com/images/I/61XCnIv4vlL.jpg" alt="Product 1">
+        <h3>Baby Carrier</h3>
+        <p>Ergonomic design for comfort and safety.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product2')">
+        <img src="https://m.media-amazon.com/images/I/71qHYC0CXuL.jpg" alt="Product 2">
+        <h3>Soft Baby Blankets</h3>
+        <p>Warm and cozy for newborns and toddlers.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product3')">
+        <img src="https://www.smartivity.in/cdn/shop/files/1_23.jpg?v=1720123156" alt="Product 3">
+        <h3>Interactive Learning Toys</h3>
+        <p>Educational and fun for early development.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product4')">
+        <img src="https://m.media-amazon.com/images/I/71V73AjAqBL.jpg" alt="Product 4">
+        <h3>Baby Monitors</h3>
+        <p>Stay connected with real-time audio and video.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product5')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHrA7IJKCr0mugd7XQSGH4M7gjZVex6E3nVw&s" alt="Product 5">
+        <h3>Diaper Bags</h3>
+        <p>Stylish and spacious for on-the-go parenting.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product6')">
+        <img src="https://m.media-amazon.com/images/I/71J11i+uBzL.jpg" alt="Product 6">
+        <h3>Convertible High Chairs</h3>
+        <p>Multi-functional seating for babies and toddlers.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product7')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5iDvUpTEeAuhZ3668TlrbIJOWoV34XCakgw&s" alt="Product 7">
+        <h3>Baby Swings</h3>
+        <p>Soothing motion to calm your baby.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product8')">
+        <img src="https://www.jiomart.com/images/product/original/rvr3zquspr/enorme-3-in-1-bpa-free-silicone-non-toxic-soother-teether-keys-teething-toy-for-babies-and-infants-product-images-orvr3zquspr-p591530839-0-202205230635.jpg?im=Resize=(420,420)" alt="Product 8">
+        <h3>Non-Toxic Teething Toys</h3>
+        <p>Safe for babies to chew and play with.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product9')">
+        <img src="https://images-cdn.ubuy.co.in/634e36b6efc54a4d526d3389-momcozy-universal-baby-stroller.jpg" alt="Product 9">
+        <h3>Stroller Organizers</h3>
+        <p>Keep essentials handy during outings.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product10')">
+        <img src="https://images-cdn.ubuy.co.in/63da5a7726f21d2a371fc567-baby-play-portable-playard-play-pen-with.jpg" alt="Product 10">
+        <h3>Portable Playards</h3>
+        <p>Safe and convenient for travel or home use.</p>
+    </div>
+</div>
+
+<!-- Product details modal -->
+<div class="product-details" id="product-details">
+    <div class="details-content" id="details-content">
+        <h2 id="product-title"></h2>
+        <p id="product-description"></p>
+        <button class="close-btn" onclick="closeDetails()">Close</button>
+    </div>
+</div>
+
+<script>
+    const products = {
+        product1: {
+            title: "Baby Carrier",
+            description: "Ergonomic baby carriers with adjustable straps. Cost: $10-$20. Sell: $40-$80."
+        },
+        product2: {
+            title: "Soft Baby Blankets",
+            description: "Ultra-soft and breathable blankets for comfort. Cost: $5-$10. Sell: $20-$30."
+        },
+        product3: {
+            title: "Interactive Learning Toys",
+            description: "Promotes learning and motor skills. Cost: $8-$15. Sell: $30-$60."
+        },
+        product4: {
+            title: "Baby Monitors",
+            description: "Advanced features like two-way talk and night vision. Cost: $15-$25. Sell: $60-$120."
+        },
+        product5: {
+            title: "Diaper Bags",
+            description: "Stylish with multiple compartments. Cost: $8-$15. Sell: $30-$70."
+        },
+        product6: {
+            title: "Convertible High Chairs",
+            description: "Grows with the baby; durable and functional. Cost: $20-$30. Sell: $70-$150."
+        },
+        product7: {
+            title: "Baby Swings",
+            description: "Automatic swinging and calming music. Cost: $30-$50. Sell: $100-$200."
+        },
+        product8: {
+            title: "Non-Toxic Teething Toys",
+            description: "Safe materials for teething babies. Cost: $2-$5. Sell: $10-$20."
+        },
+        product9: {
+            title: "Stroller Organizers",
+            description: "Compact and easy to attach. Cost: $5-$10. Sell: $20-$40."
+        },
+        product10: {
+            title: "Portable Playards",
+            description: "Easy to fold and carry for travel. Cost: $25-$40. Sell: $100-$200."
+        },
+    };
+
+    function showDetails(productId) {
+        const product = products[productId];
+        document.getElementById('product-title').textContent = product.title;
+        document.getElementById('product-description').textContent = product.description;
+        document.getElementById('product-details').style.display = 'flex';
+    }
+
+    function closeDetails() {
+        document.getElementById('product-details').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>

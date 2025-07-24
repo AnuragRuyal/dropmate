@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Decor - Trendy Products</title>
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+
+<header>
+    <h1>Top 10 Home Decor Products</h1>
+</header>
+
+<div class="product-list">
+    <!-- Product 1 -->
+    <div class="product-item" onclick="showDetails('product1')">
+        <img src="https://i.etsystatic.com/12804288/r/il/065b6f/2512936856/il_fullxfull.2512936856_i1a0.jpg" alt="Product 1">
+        <h3>Macrame Wall Hanging</h3>
+        <p>Available on: AliExpress, AliBaba</p>
+    </div>
+    
+    <!-- Product 2 -->
+    <div class="product-item" onclick="showDetails('product2')">
+        <img src="https://images-cdn.ubuy.com.sa/65b87b2ec1c06b1d0712af7b-luxe-weavers-geometric-gray-swirls-5x7.jpg" alt="Product 2">
+        <h3>Geometric Area Rugs</h3>
+        <p>Available on: AliExpress, AliBaba</p>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-item" onclick="showDetails('product3')">
+        <img src="https://i.pinimg.com/originals/fe/a0/7a/fea07a70dafae085b3645c50e316bcdb.jpg" alt="Product 3">
+        <h3>Decorative Throw Pillows</h3>
+        <p>Available on: AliExpress, AliBaba</p>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product-item" onclick="showDetails('product4')">
+        <img src="https://i5.walmartimages.com/asr/a6f23824-371b-4530-bc8a-db711c129b93_1.811d000bb9bb730db727b2c6a33e007e.jpeg?odnWidth=1000&odnHeight=1000&odnBg=ffffff" alt="Product 4">
+        <h3>LED String Lights</h3>
+        <p>Available on: AliExpress, AliBaba</p>
+    </div>
+
+    <!-- Product 5 -->
+    <div class="product-item" onclick="showDetails('product5')">
+        <img src="https://i.etsystatic.com/22649442/r/il/17b1ae/3031823650/il_fullxfull.3031823650_ge96.jpg" alt="Product 5">
+        <h3>Framed Wall Art Prints</h3>
+        <p>Available on: AliExpress, AliBaba</p>
+    </div>
+
+    <!-- Product 6 -->
+    <div class="product-item" onclick="showDetails('product6')">
+        <img src="https://fashionsum.com/wp-content/uploads/2020/01/105.png" alt="Product 6">
+        <h3>Indoor Succulent Plants</h3>
+        <p>Available on: AliExpress, AliBaba</p>
+    </div>
+
+    <!-- Product 7 -->
+    <div class="product-item" onclick="showDetails('product7')">
+        <img src="https://i5.walmartimages.com/asr/fd001407-ea57-41e7-8474-d9987c18e942.bda07cc2e8ec4917498a268a5cf0aea2.jpeg" alt="Product 7">
+        <h3>Modern Table Lamps</h3>
+        <p>Available on: AliExpress, AliBaba</p>
+    </div>
+
+    <!-- Product 8 -->
+    <div class="product-item" onclick="showDetails('product8')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMefeuw7F3UeMN6xvxKy3qSsfJOPBCqE7_Ag&s" alt="Product 8">
+        <h3>Velvet Sofa Covers</h3>
+        <p>Available on: AliExpress, AliBaba</p>
+    </div>
+
+    <!-- Product 9 -->
+    <div class="product-item" onclick="showDetails('product9')">
+        <img src="https://i.pinimg.com/originals/ca/11/ae/ca11ae7cda0196f809d48395ecdb1b6e.jpg" alt="Product 9">
+        <h3>Decorative Mirrors</h3>
+        <p>Available on: AliExpress, AliBaba</p>
+    </div>
+
+    <!-- Product 10 -->
+    <div class="product-item" onclick="showDetails('product10')">
+        <img src="https://i.pinimg.com/originals/00/6f/f2/006ff2eea514c9cf51e9c581bb08c656.jpg" alt="Product 10">
+        <h3>Floating Shelves</h3>
+        <p>Available on: AliExpress, AliBaba</p>
+    </div>
+</div>
+
+<!-- Product details modal -->
+<div class="product-details" id="product-details">
+    <div class="details-content" id="details-content">
+        <h2 id="product-title"></h2>
+        <p id="product-description"></p>
+        <button class="close-btn" onclick="closeDetails()">Close</button>
+    </div>
+</div>
+
+<script>
+    const products = {
+        product1: {
+            title: "Macrame Wall Hanging",
+            description: "Handmade bohemian-style wall hanging, perfect for modern decor. Available for $4.99. You can sell it for $25 on Amazon.",
+        },
+        product2: {
+            title: "Geometric Area Rugs",
+            description: "Durable, stain-resistant rugs with modern designs. Available for $2.20. Starting selling at $50 on Wayfair.",
+        },
+        product3: {
+            title: "Decorative Throw Pillows",
+            description: "Soft, stylish pillows to elevate any living space. Available for $4. Pack of 4 available for $30 on Amazon.",
+        },
+        product4: {
+            title: "LED String Lights",
+            description: "Energy-efficient decorative lights for cozy ambiance. Available for $0.80-2.35. You can sell at $15 on Amazon.",
+        },
+        product5: {
+            title: "Framed Wall Art Prints",
+            description: "Gallery-quality prints in a variety of themes. Available for $1.38-8.50. selling price $40 per piece on Etsy.",
+        },
+        product6: {
+            title: "Indoor Succulent Plants",
+            description: "Low-maintenance decorative plants. Available for $2.55. Sets starting at $20 on The Sill.",
+        },
+        product7: {
+            title: "Modern Table Lamps",
+            description: "Stylish lighting solutions for homes. Available for $6.50-10.40. Starting at $35 on Wayfair.",
+        },
+        product8: {
+            title: "Velvet Sofa Covers",
+            description: "Luxurious covers to protect and style your furniture. Available for $5.50-9.50. Starting at $25 on Overstock.",
+        },
+        product9: {
+            title: "Decorative Mirrors",
+            description: "Elegant mirrors to add depth and style. Available for $12. Selling price $60 on Walmart.",
+        },
+        product10: {
+            title: "Floating Shelves",
+            description: "Space-saving storage solutions. Available for $4. selling price is $30 for a set on IKEA.",
+        },
+    };
+
+    function showDetails(productId) {
+        const product = products[productId];
+        document.getElementById('product-title').textContent = product.title;
+        document.getElementById('product-description').textContent = product.description;
+        document.getElementById('product-details').style.display = 'flex';
+    }
+
+    function closeDetails() {
+        document.getElementById('product-details').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>

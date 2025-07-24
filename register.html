@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - DropMate</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body background="https://c.wallhere.com/photos/8b/63/anime_landscape_torii_sun_rays_forest_Asian_architecture_steps_trees-159308.jpg!d">
+
+    <section>
+        <form>
+            <h1>Register</h1>
+            <div class="inputbox">
+                <ion-icon name="person-outline"></ion-icon>
+                <input type="text" placeholder=" " required>
+                <label>Username</label>
+            </div>
+            <div class="inputbox">
+                <ion-icon name="mail-outline"></ion-icon>
+                <input type="email" placeholder=" " required>
+                <label>Email</label>
+            </div>            
+            <div class="inputbox">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input type="password" placeholder=" " required>
+                <label>Password</label>
+            </div>
+            <button>Create Account</button>
+            <div class="register">
+                <p>Already have an account? <a href="index.html">Login</a></p>
+            </div>
+        </form>
+    </section>
+</body>
+</html>
+
+<script>
+    document.querySelector('from').addEventListener('submit', function(event) {
+        event.prevenDefault();
+        const email =  document.querySelector('input[type="email"]').value;
+        const password =document.querySelector('input[type="password"]').value;
+
+        fetch('http://localhost:3000/register',
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type':'application/json'
+                },
+                body:JSON.stringify({ email, password})
+                })
+                .then(response => response.json())
+                .then(data => alert(data.message))
+                .catch(error => alert('Error: ' + error));
+            });
+</script>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Gadgets</title>
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+
+<header>
+    <h1>Top Best Selling Tech Gadgets: Innovation Meets Trend</h1>
+</header>
+
+<div class="product-list">
+    <!-- Tech Gadgets -->
+    <div class="product-item" onclick="showDetails('product1')">
+        <img src="https://www.unboxify.in/cdn/shop/products/717U03zY78L._SL1500_d44617ce-a94b-44f5-8957-bbbfdb3461fb.jpg?v=1694963630" alt="Product 1">
+        <h3>Wireless Earbuds</h3>
+        <p>Compact and stylish, with noise-canceling technology.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product2')">
+        <img src="https://m.media-amazon.com/images/I/51CnRBSVnrL.jpg" alt="Product 2">
+        <h3>Portable Projectors</h3>
+        <p>HD-quality, lightweight, perfect for outdoor movies.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product3')">
+        <img src="https://cdn.vox-cdn.com/thumbor/9ybjE6KWOyWzR0sWyPR1vzx_35Q=/0x0:4050x2980/1400x1400/filters:focal(2025x1490:2026x1491)/cdn.vox-cdn.com/uploads/chorus_asset/file/24925214/Home_Assistant_Green___In_context_2.png" alt="Product 3">
+        <h3>Smart Home Assistants</h3>
+        <p>Voice-activated devices for a smarter home.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product4')">
+        <img src="https://m.media-amazon.com/images/I/81Qn0AntpJL.jpg" alt="Product 4">
+        <h3>Power Banks</h3>
+        <p>High-capacity chargers for on-the-go use.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product5')">
+        <img src="https://static.helioswatchstore.com/media/catalog/product/f/t/ftw4024-3p-1.jpg" alt="Product 5">
+        <h3>Smartwatches</h3>
+        <p>Track fitness, calls, and notifications on your wrist.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product6')">
+        <img src="https://m.media-amazon.com/images/I/71Sl9tngKEL.jpg" alt="Product 6">
+        <h3>RGB Keyboards</h3>
+        <p>Customizable lighting, perfect for gamers.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product7')">
+        <img src="https://www.izicart.com/cdn/shop/files/B_8.webp?v=1728915708&width=1946" alt="Product 7">
+        <h3>Mini Drones</h3>
+        <p>Capture aerial photos with ease.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product8')">
+        <img src="https://avstore.in/cdn/shop/files/3.AVStore-Bose-QuietComfort-45-Noise-Left-Side-View.jpg?v=1685695623&width=2000" alt="Product 8">
+        <h3>Noise-Canceling Headphones</h3>
+        <p>Immerse yourself in music without distractions.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product9')">
+        <img src="https://m.media-amazon.com/images/I/61NcquKe00L.jpg" alt="Product 9">
+        <h3>Streaming Sticks</h3>
+        <p>Turn any TV into a smart one with ease.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product10')">
+        <img src="https://avstore.in/cdn/shop/products/AVStore-JBL-boombox2-1.jpg?v=1615208720&width=2048" alt="Product 10">
+        <h3>Portable Bluetooth Speakers</h3>
+        <p>Rich sound, perfect for gatherings or travel.</p>
+    </div>
+</div>
+
+<!-- Product details modal -->
+<div class="product-details" id="product-details">
+    <div class="details-content" id="details-content">
+        <h2 id="product-title"></h2>
+        <p id="product-description"></p>
+        <button class="close-btn" onclick="closeDetails()">Close</button>
+    </div>
+</div>
+
+<script>
+    const products = {
+        product1: {
+            title: "Wireless Earbuds",
+            description: "Compact, high-quality sound with noise-canceling features. Cost: $5-$15. Sell: $25-$60."
+        },
+        product2: {
+            title: "Portable Projectors",
+            description: "Small, HD, ideal for outdoor events or home theaters. Cost: $50-$80. Sell: $150-$300."
+        },
+        product3: {
+            title: "Smart Home Assistants",
+            description: "Control lights, music, and more with voice commands. Cost: $20-$30. Sell: $50-$120."
+        },
+        product4: {
+            title: "Power Banks",
+            description: "Stay charged on the go, supports multiple devices. Cost: $5-$10. Sell: $20-$40."
+        },
+        product5: {
+            title: "Smartwatches",
+            description: "Monitor fitness and get notifications on the go. Cost: $15-$30. Sell: $60-$150."
+        },
+        product6: {
+            title: "RGB Keyboards",
+            description: "Perfect for gamers with customizable lighting. Cost: $10-$25. Sell: $50-$90."
+        },
+        product7: {
+            title: "Mini Drones",
+            description: "Aerial photography made simple and fun. Cost: $30-$60. Sell: $100-$200."
+        },
+        product8: {
+            title: "Noise-Canceling Headphones",
+            description: "High-quality audio with distraction-free listening. Cost: $20-$40. Sell: $80-$200."
+        },
+        product9: {
+            title: "Streaming Sticks",
+            description: "Upgrade your TV with streaming capabilities. Cost: $10-$20. Sell: $40-$90."
+        },
+        product10: {
+            title: "Portable Bluetooth Speakers",
+            description: "Great sound in a compact design. Cost: $10-$25. Sell: $50-$100."
+        },
+    };
+
+    function showDetails(productId) {
+        const product = products[productId];
+        document.getElementById('product-title').textContent = product.title;
+        document.getElementById('product-description').textContent = product.description;
+        document.getElementById('product-details').style.display = 'flex';
+    }
+
+    function closeDetails() {
+        document.getElementById('product-details').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Car Accessories</title>
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+
+<header>
+    <h1>Top 10 Must-Have Car Accessories</h1>
+</header>
+
+<div class="product-list">
+    <!-- Car Accessories Products -->
+    <div class="product-item" onclick="showDetails('product1')">
+        <img src="https://images-cdn.ubuy.co.in/6437f61271e04356c60789f3-car-phone-holder-mount-military-grade.jpg" alt="Product 1">
+        <h3>Car Phone Mount</h3>
+        <p>Securely mount your phone for navigation.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product2')">
+        <img src="https://images.meesho.com/images/products/444575104/wordq_512.webp" alt="Product 2">
+        <h3>Trunk Organizer</h3>
+        <p>Keep your car's trunk neat and organized.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product3')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVaxDhywtyodeNv_U_Br_aUmAZtrg4hSKW_A&s" alt="Product 3">
+        <h3>Car Seat Cushion</h3>
+        <p>Provides lumbar support and comfort during drives.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product4')">
+        <img src="https://ausha.co.in/cdn/shop/files/23.png?v=1735814924" alt="Product 4">
+        <h3>Dash Cam</h3>
+        <p>Capture your drives with full HD recording.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product5')">
+        <img src="https://www.robustt.in/cdn/shop/files/USP.jpg?v=1714802307" alt="Product 5">
+        <h3>Portable Car Vacuum</h3>
+        <p>Lightweight and effective for quick cleaning.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product6')">
+        <img src="https://www.lyrovo.com/cdn/shop/products/CarTireInfloter.jpg?v=1664973945" alt="Product 6">
+        <h3>Car Tire Inflator</h3>
+        <p>Inflate tires anytime, anywhere with ease.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product7')">
+        <img src="https://reffair.in/cdn/shop/files/6-_3.png?v=1696250493" alt="Product 7">
+        <h3>Car Air Purifier</h3>
+        <p>Remove odors and allergens from the cabin.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product8')">
+        <img src="https://cdn.shopify.com/s/files/1/0778/2390/2013/files/car-magnetic-curtains-2.jpg?v=1725784004" alt="Product 8">
+        <h3>Sunshade</h3>
+        <p>Protect your dashboard and reduce cabin heat.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product9')">
+        <img src="https://rukminim2.flixcart.com/image/850/1000/l30hmkw0/car-fancy-light/o/s/6/12-car-led-interior-ambient-multicolor-rgb-lighting-kit-with-original-image8dyrmnygecg.jpeg?q=20&crop=false" alt="Product 9">
+        <h3>LED Interior Lighting</h3>
+        <p>Enhance your car’s ambiance with custom lighting.</p>
+    </div>
+    <div class="product-item" onclick="showDetails('product10')">
+        <img src="https://images.naptol.com/usr/local/csp/staticContent/product_images/horizontal/750x750/BLCC)-1%20(1).jpg" alt="Product 10">
+        <h3>Bluetooth FM Transmitter</h3>
+        <p>Stream music and take calls hands-free.</p>
+    </div>
+</div>
+
+<!-- Product details modal -->
+<div class="product-details" id="product-details">
+    <div class="details-content" id="details-content">
+        <h2 id="product-title"></h2>
+        <p id="product-description"></p>
+        <button class="close-btn" onclick="closeDetails()">Close</button>
+    </div>
+</div>
+
+<script>
+    const products = {
+        product1: {
+            title: "Car Phone Mount",
+            description: "Compatible with most smartphones, this mount ensures hands-free operation and safe navigation while driving."
+        },
+        product2: {
+            title: "Trunk Organizer",
+            description: "Made from durable material, this organizer has multiple compartments for groceries, tools, and emergency supplies."
+        },
+        product3: {
+            title: "Car Seat Cushion",
+            description: "Ergonomically designed for comfort and back support during long journeys."
+        },
+        product4: {
+            title: "Dash Cam",
+            description: "1080p HD recording with night vision and loop recording for your safety and insurance claims."
+        },
+        product5: {
+            title: "Portable Car Vacuum",
+            description: "Compact and powerful vacuum cleaner to clean dirt, dust, and crumbs efficiently."
+        },
+        product6: {
+            title: "Car Tire Inflator",
+            description: "Portable inflator with digital display and auto shut-off for accurate tire pressure."
+        },
+        product7: {
+            title: "Car Air Purifier",
+            description: "Removes dust, pollen, and odors using HEPA filtration for a fresh cabin atmosphere."
+        },
+        product8: {
+            title: "Sunshade",
+            description: "Reflective sunshade that prevents heat buildup and protects the car’s interior from UV damage."
+        },
+        product9: {
+            title: "LED Interior Lighting",
+            description: "Customizable RGB LED strips to enhance your car’s interior appearance."
+        },
+        product10: {
+            title: "Bluetooth FM Transmitter",
+            description: "Enables wireless audio streaming, hands-free calling, and USB charging in your car."
+        },
+    };
+
+    function showDetails(productId) {
+        const product = products[productId];
+        document.getElementById('product-title').textContent = product.title;
+        document.getElementById('product-description').textContent = product.description;
+        document.getElementById('product-details').style.display = 'flex';
+    }
+
+    function closeDetails() {
+        document.getElementById('product-details').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>
